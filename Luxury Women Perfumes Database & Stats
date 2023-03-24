@@ -1,0 +1,45 @@
+CREATE TABLE women_perfumes(ID INTEGER PRIMARY KEY, BRAND TEXT, NAME TEXT, SCENT TEXT, QUANTITY INTEGER, PRICE INTEGER, AISLE INTEGER);
+
+INSERT INTO women_perfumes VALUES (1, "Tom Ford", "Lost Cherry", "Gourmand", 3, 250.00, 4);
+
+INSERT INTO women_perfumes VALUES (2, "Valentino", "Voce Vita", "Floral & Fruity", 2, 156.00, 1);
+
+INSERT INTO women_perfumes VALUES (3, "Maison Francis", "724 Perfume", "Fresh & Citrus", 6, 515.00, 2);
+
+INSERT INTO women_perfumes VALUES (4, "Creed", "Love in White", "Fresh & Citrus", 7, 425.00, 2);
+
+INSERT INTO women_perfumes VALUES (5, "Byredo", "Vanille Antique", "Gourmand", 2, 335.00, 3);
+
+INSERT INTO women_perfumes VALUES (6, "Estee Lauder", "Sensous", "Woody & Musk", 5, 78.00, 3);
+
+INSERT INTO women_perfumes VALUES (7, "Burberry", "Hero", "Woody & Musk", 3, 143.00, 3);
+
+INSERT INTO women_perfumes VALUES (8, "Parfums de Marly", "Delina", "Floral & Fruity", 9, 355.00, 1);
+
+INSERT INTO women_perfumes VALUES (9, "Dior", "J'adore", "Floral & Fruity", 4, 130.00, 1);
+
+INSERT INTO women_perfumes VALUES (10, "Henry Rose", "Torn", "Gourmand", 1, 120.00, 3);
+
+INSERT INTO women_perfumes VALUES (11, "Tom Ford", "Noir de Noir", "Gourmand", 4, 295.00, 4);
+
+INSERT INTO women_perfumes VALUES (12, "YSL", "Black Opium", "Gourmand", 12, 155.00, 4);
+
+INSERT INTO women_perfumes VALUES (13, "Creed", "Green Irish Tweed", "Fresh & Citrus", 5, 470.00, 2);
+
+INSERT INTO women_perfumes VALUES (14, "Dior", "Miss Dior", "Floral & Fruity", 0, 80.00, 1);
+
+INSERT INTO women_perfumes VALUES (15, "Jo Malone", "Dark Amber & Ginger Lily", "Woody & Musk", 1, 220.00, 3);
+
+--display the database ordered by price.
+SELECT * FROM women_perfumes ORDER BY PRICE;
+
+--what is the average price floral & fruity items in aisle 1?
+SELECT AVG(price) "avg floral & fruity item price"
+FROM women_perfumes
+where aisle='1';
+
+--what scent is less than or equal to $150.00?
+SELECT * FROM women_perfumes WHERE PRICE <=150 ORDER BY scent;
+
+
+
